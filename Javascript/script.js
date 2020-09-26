@@ -270,6 +270,17 @@ function color() {
           (this.parentElement.style.borderColor = "#91bd45"),
             (this.parentElement.style.borderWidth = "0.2em"),
             (this.parentElement.style.borderStyle = "dashed");
+          break;
+        case 37:
+          (this.parentElement.style.borderColor = "#3ffc75"),
+            (this.parentElement.style.borderWidth = "0.15em"),
+            (this.parentElement.style.borderStyle = "dashed");
+          break;
+        case 38:
+          (this.parentElement.style.borderColor = "#de0211"),
+            (this.parentElement.style.borderWidth = "0.15em"),
+            (this.parentElement.style.borderStyle = "dashed");
+          break;
       }
 }
 function big() {
@@ -919,6 +930,8 @@ var filterArray = new Set(enArray),
       p = result1(document.querySelectorAll("option.divineSpeed")),
       V = result1(document.querySelectorAll("option.swiftParry")),
       h = result1(document.querySelectorAll("option.deflection"));
+    res = result1(document.querySelectorAll("option.resilience"));
+    per = result1(document.querySelectorAll("option.perception"));
     console.log(15 * Math.floor(E / 15));
     var y = +document.querySelector(".startHp>input").value,
       f = +document.querySelector(".startAtk>input").value,
@@ -935,7 +948,8 @@ var filterArray = new Set(enArray),
           (15 * Math.floor(E / 15) +
             15 * Math.floor(R / 15) +
             15 * Math.floor(I / 15) +
-            20 * Math.floor(h / 20)))),
+            20 * Math.floor(h / 20) +
+            10 * Math.floor(res / 10)))),
       (t +=
         (f / 100) *
         (D +
@@ -945,16 +959,21 @@ var filterArray = new Set(enArray),
               15 * Math.floor(H / 15)))),
       (r +=
         (G / 100) *
-        (s + (1 + A) * (15 * Math.floor(S / 15) + 20 * Math.floor(h / 20)))),
+        (s +
+          (1 + A) *
+            (15 * Math.floor(S / 15) +
+              20 * Math.floor(h / 20) +
+              10 * Math.floor(res / 10)))),
       (i +=
         (b / 100) *
         (1 + A) *
         (12 * Math.floor(c / 12) +
           12 * Math.floor(p / 12) +
-          18 * Math.floor(V / 30))),
+          18 * Math.floor(V / 30) +
+          5 * Math.floor(per / 5))),
       (a += (1 + A) * (12 * Math.floor(d / 12) + 12 * Math.floor(K / 12))),
       (n += (1 + A) * (20 * Math.floor(F / 20) + 30 * Math.floor(V / 30))),
-      (l += 40 * (1 + A) * Math.floor(u / 40)),
+      (l += 40 * (1 + A) * (Math.floor(u / 40) + Math.floor(per / 5))),
       (o += 40 * (1 + A) * Math.floor(C / 40)),
       (document.querySelector(".startHp>output").value = "+" + Math.round(e)),
       (document.querySelector(".startAtk>output").value = "+" + Math.round(t)),
