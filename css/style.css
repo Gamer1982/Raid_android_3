@@ -107,13 +107,13 @@ body {
 select,
 option,
 input {
- border-radius: 17%;
-  height: calc(0.85vw + 0.85vh);
-  line-height: calc(0.75vw + 0.75vh);
-  font-size: calc(0.7vw + 0.7vh);
-  text-align: center;
-  color: rgb(0, 0, 0);
-  font-weight: 900;
+	border-radius: 17%;
+	height: calc(0.85vw + 0.85vh);
+	line-height: calc(0.75vw + 0.75vh);
+	font-size: calc(0.7vw + 0.7vh);
+	text-align: center;
+	color: rgb(0, 0, 0);
+	font-weight: 900;
 }
 
 .a1 {
@@ -157,32 +157,33 @@ input {
 }
 .top_weapon {
 	border: 0.1em solid gray;
-	height:30vh;
+	height: 30vh;
 }
 .top_helmet {
 	border: 0.1em solid gray;
-	height:30vh;
+	height: 30vh;
 }
 .top_shield {
 	border: 0.1em solid gray;
-	height:30vh;
+	height: 30vh;
 }
 .top_boxing {
 	border: 0.1em solid gray;
-	height:30vh;
+	height: 30vh;
 }
 .top_armor {
 	border: 0.1em solid gray;
-	height:30vh;
+	height: 30vh;
 }
 .top_sneakers {
 	border: 0.1em solid gray;
-	height:30vh;
+	height: 30vh;
 }
 .top select {
 	width: 60%;
 	margin-left: 10%;
 }
+
 select.wep {
 	width: 45%;
 	margin-left: 30%;
@@ -221,7 +222,10 @@ h2 {
 }
 .box {
 	width: 16%;
-	padding: 0 3%;
+	padding: 0 3%  ;
+}
+.box p{
+	margin: 0 0 4px 0;
 }
 .arena {
 	width: 7%;
